@@ -1,10 +1,14 @@
-#include <Windows.h>
 
+
+
+#include <Windows.h>
+#include "PV3D.h"
+#include <GL/freeglut.h>
 //#include <GL/glut.h>
 
-#include <iostream>
-
 #include "Camara.h"
+
+#include <iostream>
 using namespace std;
 
 // Freeglut parameters
@@ -21,9 +25,6 @@ GLdouble xRight=10, xLeft=-xRight, yTop=10, yBot=-yTop, N=1, F=1000;
 GLdouble eyeX=100.0, eyeY=100.0, eyeZ=100.0;
 GLdouble lookX=0.0, lookY=0.0, lookZ=0.0;
 GLdouble upX=0, upY=1, upZ=0;
-
-//Camera object
-//Camara camara;
 
 void initGL() {	 		 
 	glClearColor(0.6f,0.7f,0.8f,1.0);
@@ -45,7 +46,7 @@ void initGL() {
 	glShadeModel(GL_SMOOTH);
 
 	// buildSceneObjects();
-	//camara = Camara(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
+
 	// Camera set up
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();

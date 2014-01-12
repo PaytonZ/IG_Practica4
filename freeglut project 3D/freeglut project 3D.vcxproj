@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7B0BFFD4-F43D-4F20-B1CE-F95EB35AB0A4}</ProjectGuid>
     <RootNamespace>freeglutproject3D</RootNamespace>
+    <ProjectName>IG_Practica4</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

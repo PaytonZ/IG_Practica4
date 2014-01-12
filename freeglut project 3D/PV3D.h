@@ -5,12 +5,9 @@
 *					Juan Luis Perez Valbuena									*
 *																				*
 *********************************************************************************/
+#pragma once
 
-#ifndef PUNTO_H
-#define PUNTO_H
-#include <gl/GL.h>
-#include <gl/GLU.h>
-
+#include <GL/freeglut.h>
 
 class PV3D
 {
@@ -52,4 +49,3 @@ GLdouble vector;
 	
 };
 
-#endif // !PUNTO_H

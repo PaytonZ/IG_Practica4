@@ -18,18 +18,18 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Camara.cpp">
+    <ClCompile Include="PV3D.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PV3D.cpp">
+    <ClCompile Include="Camara.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camara.h">
+    <ClInclude Include="PV3D.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="PV3D.h">
+    <ClInclude Include="Camara.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
