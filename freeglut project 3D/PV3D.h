@@ -39,6 +39,13 @@ GLdouble vector;
 	PV3D& operator + (const PV3D &p);
 	PV3D& operator - (const PV3D &p);
 	PV3D& operator / (const GLdouble &p);
+	
+	
+	PV3D& operator -(const PV3D*& p);
+
+	
+	
+
 
 //Otras operaciones sobre Puntos
 	GLdouble distanciaEntrePuntos(const PV3D &punto);
@@ -46,6 +53,8 @@ GLdouble vector;
 	GLdouble productoEscalar(const PV3D &p);
 	PV3D normalizarVector();	
 	GLdouble moduloVector ();
+	
+
 	
 };
 

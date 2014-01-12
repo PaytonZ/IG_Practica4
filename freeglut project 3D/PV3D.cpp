@@ -83,3 +83,15 @@ GLdouble PV3D :: moduloVector()
 {
 	return sqrt(pow(x,2)+pow(y,2)+pow(z,2));
 }
+
+PV3D& PV3D ::operator -(const PV3D*& p)
+{
+	if (p->vector==0 && this->vector==0)
+		return *(new PV3D( this->x - p->x ,  this->y - p->y,
+						this->z-p->z, true));
+	else if (p->vector==1 && this->vector==1)
+		return *(new PV3D(this->x - p->x ,  this->y - p->y,
+						this->z - p->z, true));
+	else return *this;
+}
+

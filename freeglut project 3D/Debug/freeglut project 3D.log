@@ -1,15 +1,65 @@
-﻿Compilación iniciada a las 12/01/2014 17:19:01.
+﻿Compilación iniciada a las 12/01/2014 18:00:55.
      1>Proyecto "E:\Mis Documentos\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica4\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica4\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Camara.cpp PV3D.cpp main.cpp
+         PV3D.cpp
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\pv3d.cpp(91): error C2440: 'return' : no se puede realizar la conversión de 'PV3D *' a 'PV3D *&'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\pv3d.cpp(94): error C2440: 'return' : no se puede realizar la conversión de 'PV3D *' a 'PV3D *&'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\pv3d.cpp(95): error C2440: 'return' : no se puede realizar la conversión de 'PV3D *const ' a 'PV3D *&'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\pv3d.cpp(98): error C2803: 'operator -=' debe tener al menos un parámetro formal de tipo de clase
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\pv3d.cpp(98): error C2805: 'operator -=' binario no tiene suficientes parámetros
+         Camara.cpp
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(10): warning C4244: '=' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(10): error C2664: 'PV3D::productoEscalar' : no se puede convertir el parámetro 1 de 'PV3D *' a 'const PV3D &'
+                 Razón: no se puede realizar la conversión de 'PV3D *' a 'const PV3D'
+                 Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(11): warning C4244: '=' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(11): error C2664: 'PV3D::productoEscalar' : no se puede convertir el parámetro 1 de 'PV3D *' a 'const PV3D &'
+                 Razón: no se puede realizar la conversión de 'PV3D *' a 'const PV3D'
+                 Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(12): warning C4244: '=' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(12): error C2664: 'PV3D::productoEscalar' : no se puede convertir el parámetro 1 de 'PV3D *' a 'const PV3D &'
+                 Razón: no se puede realizar la conversión de 'PV3D *' a 'const PV3D'
+                 Ningún constructor ha podido aceptar el tipo de origen o bien la resolución de sobrecarga del constructor era ambigua
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(21): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(22): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(24): error C2296: '*' : no es válido; el operando izquierdo es de tipo 'PV3D *'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(25): error C2228: el operando izquierdo de '.normalizarVector' debe tener class/struct/union
+                 el tipo es 'PV3D *'
+                 ¿deseaba utilizar '->' en su lugar?
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(26): error C2296: '*' : no es válido; el operando izquierdo es de tipo 'PV3D *'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(27): error C2228: el operando izquierdo de '.normalizarVector' debe tener class/struct/union
+                 el tipo es 'PV3D *'
+                 ¿deseaba utilizar '->' en su lugar?
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(33): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(34): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(35): error C2228: el operando izquierdo de '.x' debe tener class/struct/union
+                 el tipo es 'PV3D *'
+                 ¿deseaba utilizar '->' en su lugar?
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(35): error C2228: el operando izquierdo de '.y' debe tener class/struct/union
+                 el tipo es 'PV3D *'
+                 ¿deseaba utilizar '->' en su lugar?
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(35): error C2228: el operando izquierdo de '.z' debe tener class/struct/union
+                 el tipo es 'PV3D *'
+                 ¿deseaba utilizar '->' en su lugar?
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(36): error C2296: '*' : no es válido; el operando izquierdo es de tipo 'PV3D *'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(37): error C2228: el operando izquierdo de '.normalizarVector' debe tener class/struct/union
+                 el tipo es 'PV3D *'
+                 ¿deseaba utilizar '->' en su lugar?
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(38): error C2296: '*' : no es válido; el operando izquierdo es de tipo 'PV3D *'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(39): error C2228: el operando izquierdo de '.normalizarVector' debe tener class/struct/union
+                 el tipo es 'PV3D *'
+                 ¿deseaba utilizar '->' en su lugar?
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(45): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(46): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(48): error C2296: '*' : no es válido; el operando izquierdo es de tipo 'PV3D *'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\camara.cpp(49): error C2296: '*' : no es válido; el operando izquierdo es de tipo 'PV3D *'
+         Generando código...
+         Compilando...
          main.cpp
-       Link:
-         E:\programas\Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Mis Documentos\GitHub\IG_Practica4\Debug\IG_Practica4.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\Mis Documentos\GitHub\IG_Practica4\freeglut\lib\\" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Mis Documentos\GitHub\IG_Practica4\Debug\IG_Practica4.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Mis Documentos\GitHub\IG_Practica4\Debug\IG_Practica4.lib" /MACHINE:X86 Debug\Camara.obj
-         Debug\main.obj
-         Debug\PV3D.obj
-         freeglut project 3D.vcxproj -> E:\Mis Documentos\GitHub\IG_Practica4\Debug\IG_Practica4.exe
-     1>Compilación del proyecto terminada "E:\Mis Documentos\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" (Build destinos).
+         Generando código...
+     1>Compilación del proyecto terminada "E:\Mis Documentos\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" (Build destinos) -- ERROR.
 
-Compilación correcta.
+ERROR al compilar.
 
-Tiempo transcurrido 00:00:01.55
+Tiempo transcurrido 00:00:01.79
