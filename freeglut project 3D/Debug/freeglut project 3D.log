@@ -1,4 +1,4 @@
-﻿Compilación iniciada a las 13/01/2014 16:40:45.
+﻿Compilación iniciada a las 13/01/2014 17:26:10.
      1>Proyecto "C:\Users\David\Documents\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica4\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Camara.cpp
@@ -21,4 +21,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:00.94
+Tiempo transcurrido 00:00:00.96

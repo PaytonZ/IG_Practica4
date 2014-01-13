@@ -50,7 +50,12 @@ public:
 	 void pitch(GLfloat angulo);
 	 void yaw (GLfloat angulo);
 	 void roll (GLfloat angulo);
-	void inicializaOrto();
+	 void inicializaOrto();
+	 void frontal();
+	 void lateral();
+	 void cenital();
+	 void esquina();
+	 void recorridoEje( GLdouble x, GLdouble y, GLdouble z);
 
 private:
 	PV3D *eye;  // Punto donde esta la camara

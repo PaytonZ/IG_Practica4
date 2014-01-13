@@ -78,3 +78,126 @@ void Camara :: inicializaOrto()
 	glOrtho(left, right, bottom, top, near1, far1);
 }
 
+void Camara :: frontal()
+{
+		/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+
+		eye = new PV3D(100,100,100,false);
+
+		look = new PV3D(0,0,0,false);
+
+		up = new PV3D(0,1,0,true);
+		//n = new PV3D(eyeX,eyeY,eyeZ,false);
+		
+		PV3D auxN =((*eye) - (*look)).normalizarVector();
+		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
+
+		PV3D auxU = ((*up)*(*n)).normalizarVector();
+		u= new PV3D(auxU.x,auxU.y,auxU.z,true);
+
+		PV3D auxV = (*n)*(*u);
+		v = new PV3D(auxV.x,auxV.y,auxV.z,true);
+
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+		
+}
+
+void Camara :: cenital()
+{
+	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+
+		eye = new PV3D(0,100,0,false);
+
+		look = new PV3D(0,0,0,false);
+
+		up = new PV3D(1,0,0,true);
+		//n = new PV3D(eyeX,eyeY,eyeZ,false);
+		
+		PV3D auxN =((*eye) - (*look)).normalizarVector();
+		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
+
+		PV3D auxU = ((*up)*(*n)).normalizarVector();
+		u= new PV3D(auxU.x,auxU.y,auxU.z,true);
+
+		PV3D auxV = (*n)*(*u);
+		v = new PV3D(auxV.x,auxV.y,auxV.z,true);
+
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+}
+
+void Camara :: lateral()
+{
+	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+
+		eye = new PV3D(100,0,0,false);
+
+		look = new PV3D(0,0,0,false);
+
+		up = new PV3D(0,1,0,true);
+		//n = new PV3D(eyeX,eyeY,eyeZ,false);
+		
+		PV3D auxN =((*eye) - (*look)).normalizarVector();
+		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
+
+		PV3D auxU = ((*up)*(*n)).normalizarVector();
+		u= new PV3D(auxU.x,auxU.y,auxU.z,true);
+
+		PV3D auxV = (*n)*(*u);
+		v = new PV3D(auxV.x,auxV.y,auxV.z,true);
+
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+}
+
+void Camara :: esquina()
+{
+		/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+
+		eye = new PV3D(0,0,100,false);
+
+		look = new PV3D(0,0,0,false);
+
+		up = new PV3D(0,1,0,true);
+		//n = new PV3D(eyeX,eyeY,eyeZ,false);
+		
+		PV3D auxN =((*eye) - (*look)).normalizarVector();
+		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
+
+		PV3D auxU = ((*up)*(*n)).normalizarVector();
+		u= new PV3D(auxU.x,auxU.y,auxU.z,true);
+
+		PV3D auxV = (*n)*(*u);
+		v = new PV3D(auxV.x,auxV.y,auxV.z,true);
+
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+}
+
+void Camara :: recorridoEje(GLdouble x, GLdouble y, GLdouble z)
+{
+	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+	eye->x=eye->x+x;
+
+	eye->y=eye->y+y;
+
+	eye->z=eye->z+z;
+
+	PV3D auxN =((*eye) - (*look)).normalizarVector();
+		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
+
+		PV3D auxU = ((*up)*(*n)).normalizarVector();
+		u= new PV3D(auxU.x,auxU.y,auxU.z,true);
+
+		PV3D auxV = (*n)*(*u);
+		v = new PV3D(auxV.x,auxV.y,auxV.z,true);
+
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+}

@@ -28,6 +28,11 @@ GLdouble upX=0, upY=1, upZ=0;
 
 Camara camara;
 
+//Objetos de practica
+GLUquadricObj* pelotaY;
+GLUquadricObj* pelotaX;
+GLUquadricObj* pelotaZ;
+
 void initGL() {	 		 
 	glClearColor(0.6f,0.7f,0.8f,1.0);
     glEnable(GL_LIGHTING);    
@@ -49,7 +54,15 @@ void initGL() {
 
 	// buildSceneObjects();
 	camara = Camara(eyeX,eyeY,eyeZ,lookX,lookY,lookZ,upX,upY,upZ,N,F,xRight,xLeft,yTop,yBot);
+	
+	pelotaX=gluNewQuadric();
+	gluQuadricDrawStyle(pelotaX, GLU_LINE);
 
+	pelotaY=gluNewQuadric();
+	gluQuadricDrawStyle(pelotaY, GLU_LINE);
+
+	pelotaZ=gluNewQuadric();
+	gluQuadricDrawStyle(pelotaZ, GLU_LINE);
 
 	// Camera set up
 	/*glMatrixMode(GL_MODELVIEW);
@@ -80,6 +93,30 @@ void display(void) {
 		glVertex3f(0, 0, 0);
 		glVertex3f(0, 0, 20);	     
 	glEnd();
+
+	//Pintamos los objetos random
+
+	glMatrixMode(GL_MODELVIEW);
+
+	glPushMatrix();
+	glTranslatef(10,0,0);
+	glColor3f(1.0,0.0,0.0); 
+	gluSphere(pelotaX,1,20,20);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0,10,0);
+	glColor3f(0.0,1.0,0.0); 
+	gluSphere(pelotaY,1,20,20);
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslatef(0,0,10);
+	glColor3f(0.0,0.0,1.0); 
+	gluSphere(pelotaX,1,20,20);
+	glPopMatrix();
+
+
 
 	glFlush();
 	glutSwapBuffers();
@@ -133,6 +170,26 @@ void key(unsigned char key, int x, int y){
 			camara.yaw(1); break;
 		case 'Y':
 			camara.yaw(-1); break;
+		case 'f':
+			camara.frontal(); break;
+		case 'c':
+			camara.cenital(); break;
+		case 'l':
+			camara.lateral();break;
+		case 'e':
+			camara.esquina();break;
+		case '1':
+			camara.recorridoEje(10,0,0); break;
+		case '2':
+			camara.recorridoEje(-10,0,0); break;
+		case '3':
+			camara.recorridoEje(0,10,0); break;
+		case '4':
+			camara.recorridoEje(0,-10,0); break;
+		case '5':
+			camara.recorridoEje(0,0,10); break;
+		case '6':
+			camara.recorridoEje(0,0,-10); break;
 		default:
 			need_redisplay = false;
 			break;
