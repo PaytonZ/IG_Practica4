@@ -12,13 +12,20 @@ public:
 		GLdouble yTop, GLdouble yBot)
 	{
 		eye = new PV3D(eyeX,eyeY,eyeZ,false);
+
 		look = new PV3D(lookX,lookY,lookZ,false);
+
 		up = new PV3D(upX,upY,upZ,true);
 		//n = new PV3D(eyeX,eyeY,eyeZ,false);
 		
-		n = new PV3D((*eye) - (*look).normalizarVector()); 
-		u= new PV3D((*up)*(*n).normalizarVector());
-		v = new PV3D((*n)*(*u));
+		PV3D auxN =((*eye) - (*look)).normalizarVector();
+		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
+
+		PV3D auxU = ((*up)*(*n)).normalizarVector();
+		u= new PV3D(auxU.x,auxU.y,auxU.z,true);
+
+		PV3D auxV = (*n)*(*u);
+		v = new PV3D(auxV.x,auxV.y,auxV.z,true);
 		
 		near1 = N;
 		far1 = F;
@@ -38,7 +45,7 @@ public:
 
 	~Camara(void)
 	{
-		delete eye,look,up,n,u,v;
+		//delete eye,look,up,n,u,v;
 	}
 	 void pitch(GLfloat angulo);
 	 void yaw (GLfloat angulo);

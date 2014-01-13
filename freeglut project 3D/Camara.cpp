@@ -37,26 +37,39 @@ void Camara :: roll(float angle)
 { 
 	float coseno = cos( angle / 180 * 3.14159265 );
 	float seno = sin( angle / 180 * 3.14159265 ); 
-	PV3D auxV = PV3D (v->x,v->y,v->z,true);
-	
-	v = &((*u)*seno+(*v)*coseno);
-	
-	v= new PV3D(v->normalizarVector());
-	u = &((*u)*coseno - auxV*seno);
-	
-	n = new PV3D(n->normalizarVector());	
+	PV3D* auxU = u;
+	PV3D* auxV = v;
+
+	PV3D newV = (*v)*coseno - (*u)*seno;
+	v = new PV3D(newV.x,newV.y,newV.z,true);
+
+	PV3D newU = (*u)*coseno +(*v)*seno;
+	u = new PV3D(newU.x,newU.y,newU.z,true);
+
 	setModelViewMatrix();
+
+	/*delete [] auxU;
+	delete [] auxV;*/
 }
 
 void Camara :: yaw(float angle)
 { 
 	float coseno = cos( angle / 180 * 3.14159265 );
 	float seno = sin( angle / 180 * 3.14159265 );
-	PV3D auxN = PV3D (n->x,n->y,n->z,true); 
-	n = &((*u)*-seno+(*n)*coseno);
-	u = &((*u)*coseno + auxN*seno);
+	PV3D* auxN = n; 
+	PV3D* auxU = u;
+
+	PV3D newN = (*auxU)*-seno+(*auxN)*coseno;
+	n = new PV3D(newN.x,newN.y,newN.z,true);
+
+	PV3D newU = (*auxU)*coseno + (*auxN)*seno;
+	u = new PV3D(newU.x,newU.y,newU.z,true);
+
 	setModelViewMatrix();
+	/*delete [] auxU;
+	delete [] auxN;*/
 }
+
 
 void Camara :: inicializaOrto()
 {

@@ -126,13 +126,13 @@ void key(unsigned char key, int x, int y){
 		case 'P':
 			camara.pitch(-1); break;
 		case 'r':
-			camara.roll(20); break;
+			camara.roll(1); break;
 		case 'R':
-			camara.roll(-20); break;
+			camara.roll(-1); break;
 		case 'y':
-			camara.yaw(20); break;
+			camara.yaw(1); break;
 		case 'Y':
-			camara.yaw(-20); break;
+			camara.yaw(-1); break;
 		default:
 			need_redisplay = false;
 			break;
