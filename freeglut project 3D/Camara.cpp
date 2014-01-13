@@ -184,9 +184,24 @@ void Camara :: recorridoEje(GLdouble x, GLdouble y, GLdouble z)
 	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
 	eye->x=eye->x+x;
 
+	if (eye->x>980)
+		eye->x=980;
+	else if (eye->x<-980)
+		eye->x=-980;
+
 	eye->y=eye->y+y;
 
+	if (eye->y>980)
+		eye->y=980;
+	else if (eye->y<-980)
+		eye->y=-980;
+
 	eye->z=eye->z+z;
+
+	if (eye->z>980)
+		eye->z=980;
+	else if (eye->z<-980)
+		eye->z=-980;
 
 	PV3D auxN =((*eye) - (*look)).normalizarVector();
 		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
