@@ -190,6 +190,18 @@ void key(unsigned char key, int x, int y){
 			camara.recorridoEje(0,0,10); break;
 		case '6':
 			camara.recorridoEje(0,0,-10); break;
+		case 'x':
+			camara.giraX(5); break;
+		case 'X':
+			camara.giraX(-5); break;
+		case 'i':
+			camara.giraY(5); break;
+		case 'I':
+			camara.giraY(-5); break;
+		case 'z':
+			camara.giraZ(5); break;
+		case 'Z':
+			camara.giraZ(-5); break;
 		default:
 			need_redisplay = false;
 			break;

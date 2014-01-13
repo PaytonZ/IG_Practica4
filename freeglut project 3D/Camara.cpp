@@ -215,4 +215,82 @@ void Camara :: recorridoEje(GLdouble x, GLdouble y, GLdouble z)
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
 		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+
+
+}
+
+void Camara :: giraX(GLdouble angulo)
+{
+	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+	anguloX+=angulo;
+	eye->y=eye->x*cos(anguloX / 180 * 3.14159265);
+
+
+	eye->z=eye->x*sin(anguloX / 180 * 3.14159265);
+
+
+	PV3D auxN =((*eye) - (*look)).normalizarVector();
+		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
+
+		PV3D auxU = ((*up)*(*n)).normalizarVector();
+		u= new PV3D(auxU.x,auxU.y,auxU.z,true);
+
+		PV3D auxV = (*n)*(*u);
+		v = new PV3D(auxV.x,auxV.y,auxV.z,true);
+
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+
+}
+
+void Camara :: giraY(GLdouble angulo)
+{
+	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+	anguloY+=angulo;
+	eye->x=eye->y*cos(anguloY / 180 * 3.14159265);
+
+
+	eye->z=eye->y*sin(anguloY / 180 * 3.14159265);
+
+
+	PV3D auxN =((*eye) - (*look)).normalizarVector();
+		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
+
+		PV3D auxU = ((*up)*(*n)).normalizarVector();
+		u= new PV3D(auxU.x,auxU.y,auxU.z,true);
+
+		PV3D auxV = (*n)*(*u);
+		v = new PV3D(auxV.x,auxV.y,auxV.z,true);
+
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+
+}
+
+
+void Camara :: giraZ(GLdouble angulo)
+{
+	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+	anguloZ+=angulo;
+	eye->y=eye->z*cos(anguloZ / 180 * 3.14159265);
+
+
+	eye->x=eye->z*sin(anguloZ / 180 * 3.14159265);
+
+
+	PV3D auxN =((*eye) - (*look)).normalizarVector();
+		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
+
+		PV3D auxU = ((*up)*(*n)).normalizarVector();
+		u= new PV3D(auxU.x,auxU.y,auxU.z,true);
+
+		PV3D auxV = (*n)*(*u);
+		v = new PV3D(auxV.x,auxV.y,auxV.z,true);
+
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+
 }

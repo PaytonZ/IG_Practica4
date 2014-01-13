@@ -39,6 +39,9 @@ public:
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
 		gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
+		anguloX=45;
+		anguloY=45;
+		anguloZ=45;
 
 
 	}
@@ -56,6 +59,9 @@ public:
 	 void cenital();
 	 void esquina();
 	 void recorridoEje( GLdouble x, GLdouble y, GLdouble z);
+	 void giraX(GLdouble angulo);
+	 void giraY(GLdouble angulo);
+	 void giraZ(GLdouble angulo);
 
 private:
 	PV3D *eye;  // Punto donde esta la camara
@@ -64,7 +70,7 @@ private:
 	PV3D *n;
 	PV3D *u;
 	PV3D *v;
-	GLdouble left , right, top , bottom , near1 , far1 , fovy , aspect;
+	GLdouble left , right, top , bottom , near1 , far1 , fovy , aspect, anguloX,anguloY, anguloZ;
 	void setModelViewMatrix();
 };
 
