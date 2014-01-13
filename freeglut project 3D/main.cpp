@@ -26,6 +26,8 @@ GLdouble eyeX=100.0, eyeY=100.0, eyeZ=100.0;
 GLdouble lookX=0.0, lookY=0.0, lookZ=0.0;
 GLdouble upX=0, upY=1, upZ=0;
 
+Camara camara;
+
 void initGL() {	 		 
 	glClearColor(0.6f,0.7f,0.8f,1.0);
     glEnable(GL_LIGHTING);    
@@ -46,16 +48,16 @@ void initGL() {
 	glShadeModel(GL_SMOOTH);
 
 	// buildSceneObjects();
+	camara = Camara(eyeX,eyeY,eyeZ,lookX,lookY,lookZ,upX,upY,upZ,N,F,xRight,xLeft,yTop,yBot);
+
 
 	// Camera set up
-	glMatrixMode(GL_MODELVIEW);
+	/*glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);
+	gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, upX, upY, upZ);*/
 
 	// Frustum set up
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();     
-	glOrtho(xLeft, xRight, yBot, yTop, N, F);
+	camara.inicializaOrto();
 
 	// Viewport set up
     glViewport(0, 0, WIDTH, HEIGHT);        
@@ -118,7 +120,19 @@ void key(unsigned char key, int x, int y){
 			//continue_in_main_loop = false; // (**)
 			//Freeglut's sentence for stopping glut's main loop (*)
 			glutLeaveMainLoop (); 
-			break;		 			 
+			break;
+		case 'p':
+			camara.pitch(1); break;
+		case 'P':
+			camara.pitch(-1); break;
+		case 'r':
+			camara.roll(20); break;
+		case 'R':
+			camara.roll(-20); break;
+		case 'y':
+			camara.yaw(20); break;
+		case 'Y':
+			camara.yaw(-20); break;
 		default:
 			need_redisplay = false;
 			break;
