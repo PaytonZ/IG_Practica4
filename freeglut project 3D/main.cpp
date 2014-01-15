@@ -9,6 +9,7 @@
 #include "Camara.h"
 
 #include <iostream>
+
 using namespace std;
 
 // Freeglut parameters

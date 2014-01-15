@@ -70,10 +70,12 @@
     <ClCompile Include="Camara.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="PV3D.cpp" />
+    <ClCompile Include="TAfin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camara.h" />
     <ClInclude Include="PV3D.h" />
+    <ClInclude Include="TAfin.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
