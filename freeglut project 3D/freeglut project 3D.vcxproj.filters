@@ -51,6 +51,12 @@
     <ClCompile Include="VerticeNormal.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MunecoNieve.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sombrero.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PV3D.h">
@@ -90,6 +96,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="VerticeNormal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MunecoNieve.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sombrero.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

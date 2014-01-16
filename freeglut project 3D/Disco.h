@@ -12,7 +12,7 @@ public:
 	{
 		radioI=ri;radioE=re;slice=sl;vueltas=vue;
 		disco=gluNewQuadric();
-		gluQuadricDrawStyle(disco, GLU_LINE);
+		gluQuadricDrawStyle(disco, GLU_FILL);
 	}
 	~Disco(void)
 	{

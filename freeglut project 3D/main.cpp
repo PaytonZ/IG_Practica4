@@ -12,6 +12,7 @@
 #include <iostream>
 
 #include "Esfera.h"
+#include "Sombrero.h"
 
 using namespace std;
 
@@ -33,9 +34,7 @@ GLdouble upX=0, upY=1, upZ=0;
 Camara camara;
 
 //Objetos de practica
-GLUquadricObj* pelotaY;
-Objeto3D* pelotaX;
-GLUquadricObj* pelotaZ;
+Sombrero gorrito;
 
 void initGL() {	 		 
 	glClearColor(0.6f,0.7f,0.8f,1.0);
@@ -59,15 +58,9 @@ void initGL() {
 	// buildSceneObjects();
 	camara = Camara(eyeX,eyeY,eyeZ,lookX,lookY,lookZ,upX,upY,upZ,N,F,xRight,xLeft,yTop,yBot);
 	
-	pelotaX= new Esfera(1,20,20);
-	//pelotaX=gluNewQuadric();
-	//gluQuadricDrawStyle(pelotaX, GLU_LINE);
+	
 
-	pelotaY=gluNewQuadric();
-	gluQuadricDrawStyle(pelotaY, GLU_LINE);
-
-	pelotaZ=gluNewQuadric();
-	gluQuadricDrawStyle(pelotaZ, GLU_LINE);
+	gorrito= Sombrero();
 
 	// Camera set up
 	/*glMatrixMode(GL_MODELVIEW);
@@ -101,29 +94,11 @@ void display(void) {
 
 	//Pintamos los objetos random
 
-	glMatrixMode(GL_MODELVIEW);
+	
 
-	glPushMatrix();
-	TAfin a= TAfin();
-	a=a.translated(10,0,0);
-	//glTranslatef(10,0,0);
-	glColor3f(1.0,0.0,0.0);
-	glMultMatrixf(a.matriz);
-	//gluSphere(pelotaX,1,20,20);
-	pelotaX->dibuja();
-	glPopMatrix();
+	
 
-	glPushMatrix();
-	glTranslatef(0,10,0);
-	glColor3f(0.0,1.0,0.0); 
-	gluSphere(pelotaY,1,20,20);
-	glPopMatrix();
-
-	glPushMatrix();
-	glTranslatef(0,0,10);
-	glColor3f(0.0,0.0,1.0); 
-	gluSphere(pelotaZ,1,20,20);
-	glPopMatrix();
+	gorrito.dibuja();
 
 
 

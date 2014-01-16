@@ -6,6 +6,7 @@ class ObjetoCompuesto:
 	public Objeto3D
 {
 public:
+	ObjetoCompuesto(){};
 	ObjetoCompuesto(int numH)
 	{
 		numHijos= numH ;

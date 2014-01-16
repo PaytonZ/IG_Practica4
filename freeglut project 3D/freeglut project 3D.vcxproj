@@ -74,9 +74,11 @@
     <ClCompile Include="Esfera.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Malla.cpp" />
+    <ClCompile Include="MunecoNieve.cpp" />
     <ClCompile Include="Objeto3D.cpp" />
     <ClCompile Include="ObjetoCompuesto.cpp" />
     <ClCompile Include="PV3D.cpp" />
+    <ClCompile Include="Sombrero.cpp" />
     <ClCompile Include="TAfin.cpp" />
     <ClCompile Include="VerticeNormal.cpp" />
   </ItemGroup>
@@ -89,9 +91,11 @@
     <ClInclude Include="Excepciones.h" />
     <ClInclude Include="Lista.h" />
     <ClInclude Include="Malla.h" />
+    <ClInclude Include="MunecoNieve.h" />
     <ClInclude Include="Objeto3D.h" />
     <ClInclude Include="ObjetoCompuesto.h" />
     <ClInclude Include="PV3D.h" />
+    <ClInclude Include="Sombrero.h" />
     <ClInclude Include="TAfin.h" />
     <ClInclude Include="VerticeNormal.h" />
   </ItemGroup>

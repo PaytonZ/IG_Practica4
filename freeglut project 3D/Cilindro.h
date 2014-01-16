@@ -12,7 +12,7 @@ public:
 	{
 		radio=r; alto=a; slice=sli; stacks=sta;
 		cilindro=gluNewQuadric();
-		gluQuadricDrawStyle(cilindro, GLU_LINE);
+		gluQuadricDrawStyle(cilindro, GLU_FILL);
 	}
 	~Cilindro(void)
 	{
