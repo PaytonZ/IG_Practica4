@@ -1,24 +1,18 @@
-﻿Compilación iniciada a las 16/01/2014 20:37:24.
+﻿Compilación iniciada a las 16/01/2014 22:33:47.
      1>Proyecto "C:\Users\David\Documents\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica4\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt MunecoNieve.cpp main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica4\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt MunecoNieve.cpp
          MunecoNieve.cpp
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(18): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(25): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(36): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(39): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(19): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(22): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(27): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(30): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(38): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(40): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
      1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(43): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(50): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-         Generando código...
-         Compilando...
-         main.cpp
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(18): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(25): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(36): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(39): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(43): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(50): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-         Generando código...
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(48): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(56): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(148): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\David\Documents\GitHub\IG_Practica4\freeglut\lib\ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.lib" /MACHINE:X86 Debug\Camara.obj
          Debug\Cara.obj
@@ -39,4 +33,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:04.10
+Tiempo transcurrido 00:00:02.21

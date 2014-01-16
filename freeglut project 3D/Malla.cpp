@@ -11,12 +11,15 @@
 
 void Malla :: dibuja()
 {
-	
+	glColor3f(r,g,b); 
+	glMatrixMode(GL_MODELVIEW);
+			glPushMatrix();
+			glMultMatrixf(m.matriz);
 	for (int i=0;i<numCaras; i++)
 	{
 		glLineWidth(1.0);
-		//glBegin(GL_POLYGON); 
-		glBegin(GL_LINE_LOOP);
+		glBegin(GL_POLYGON); 
+		//glBegin(GL_LINE_LOOP);
 		for (int j=0; j<cara[i]->getNumeroVertices();j++)
 		{
 			int iN=cara[i]->getIndiceNormalK(j);
@@ -27,6 +30,7 @@ void Malla :: dibuja()
 		glEnd();
 		
 	}
+	glPopMatrix();
 }
 
 PV3D* Malla :: calculoVectorNormalPorNewell(Cara c)

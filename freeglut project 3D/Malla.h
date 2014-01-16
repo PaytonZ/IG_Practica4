@@ -31,7 +31,7 @@ public:
 	Cara** cara;
 	int iVertice,iNormal,iCara;
 
-
+	Malla(){}
 
 	Malla(int numV, int numN, int numC): numVertices(numV), numNormales(numN), numCaras(numC)
 	{
@@ -44,7 +44,7 @@ public:
 	}
 	~Malla(void)
 	{
-		for(int i=0; i<numVertices; i++)
+		/*for(int i=0; i<numVertices; i++)
 
 			delete []vertice[i];
 
@@ -52,7 +52,7 @@ public:
 			delete []normal[i];
 
 		for(int i=0; i<numCaras; i++)
-			delete []cara[i];
+			delete []cara[i];*/
 	}
 
 

@@ -7,4 +7,6 @@ void MunecoNieve :: dibuja()
 	somb.dibuja();
 
 	muneco.dibuja();
+
+	suelo.dibuja();
 }

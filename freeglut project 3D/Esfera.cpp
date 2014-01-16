@@ -3,6 +3,6 @@
 
 void Esfera :: dibuja()
 {
-	glColor3f(1,1,1); 
+	glColor3f(r,g,b); 
 	gluSphere(esfera,radio,slice,stak);
 }
