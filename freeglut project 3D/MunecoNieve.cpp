@@ -2,6 +2,9 @@
 
 
 
-MunecoNieve::~MunecoNieve(void)
+void MunecoNieve :: dibuja()
 {
+	somb.dibuja();
+
+	muneco.dibuja();
 }

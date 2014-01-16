@@ -3,5 +3,5 @@
 
 void Cilindro :: dibuja()
 {
-	gluCylinder(cilindro,radio,radio,alto,slice,stacks);
+	gluCylinder(cilindro,radio1,radio2,alto,slice,stacks);
 }

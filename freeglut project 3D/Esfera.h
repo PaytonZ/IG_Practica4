@@ -11,7 +11,7 @@ public:
 	{
 		radio=ra; slice=sl;stak=st;
 		esfera=gluNewQuadric();
-		gluQuadricDrawStyle(esfera, GLU_LINE);
+		gluQuadricDrawStyle(esfera, GLU_FILL);
 	}
 	~Esfera(void)
 	{

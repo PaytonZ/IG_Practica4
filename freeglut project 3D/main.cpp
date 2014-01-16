@@ -12,7 +12,7 @@
 #include <iostream>
 
 #include "Esfera.h"
-#include "Sombrero.h"
+#include "MunecoNieve.h"
 
 using namespace std;
 
@@ -34,7 +34,7 @@ GLdouble upX=0, upY=1, upZ=0;
 Camara camara;
 
 //Objetos de practica
-Sombrero gorrito;
+MunecoNieve munequito;
 
 void initGL() {	 		 
 	glClearColor(0.6f,0.7f,0.8f,1.0);
@@ -60,7 +60,7 @@ void initGL() {
 	
 	
 
-	gorrito= Sombrero();
+	munequito = MunecoNieve();
 
 	// Camera set up
 	/*glMatrixMode(GL_MODELVIEW);
@@ -98,7 +98,7 @@ void display(void) {
 
 	
 
-	gorrito.dibuja();
+	munequito.dibuja();
 
 
 
