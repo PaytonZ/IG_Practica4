@@ -29,8 +29,8 @@ void Camara :: pitch(GLfloat angulo)
 	n = new PV3D(newN.x,newN.y,newN.z,true);
 
 	setModelViewMatrix();
-	/*delete [] auxN;
-	delete [] auxV;*/
+	delete  auxN;
+	delete  auxV;
 }
 
 void Camara :: roll(float angle)
@@ -48,8 +48,8 @@ void Camara :: roll(float angle)
 
 	setModelViewMatrix();
 
-	/*delete [] auxU;
-	delete [] auxV;*/
+	delete  auxU;
+	delete  auxV;
 }
 
 void Camara :: yaw(float angle)
@@ -66,8 +66,8 @@ void Camara :: yaw(float angle)
 	u = new PV3D(newU.x,newU.y,newU.z,true);
 
 	setModelViewMatrix();
-	/*delete [] auxU;
-	delete [] auxN;*/
+	delete  auxU;
+	delete  auxN;
 }
 
 

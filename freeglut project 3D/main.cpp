@@ -7,8 +7,11 @@
 //#include <GL/glut.h>
 
 #include "Camara.h"
+#include "TAfin.h"
 
 #include <iostream>
+
+#include "Esfera.h"
 
 using namespace std;
 
@@ -31,7 +34,7 @@ Camara camara;
 
 //Objetos de practica
 GLUquadricObj* pelotaY;
-GLUquadricObj* pelotaX;
+Objeto3D* pelotaX;
 GLUquadricObj* pelotaZ;
 
 void initGL() {	 		 
@@ -56,8 +59,9 @@ void initGL() {
 	// buildSceneObjects();
 	camara = Camara(eyeX,eyeY,eyeZ,lookX,lookY,lookZ,upX,upY,upZ,N,F,xRight,xLeft,yTop,yBot);
 	
-	pelotaX=gluNewQuadric();
-	gluQuadricDrawStyle(pelotaX, GLU_LINE);
+	pelotaX= new Esfera(1,20,20);
+	//pelotaX=gluNewQuadric();
+	//gluQuadricDrawStyle(pelotaX, GLU_LINE);
 
 	pelotaY=gluNewQuadric();
 	gluQuadricDrawStyle(pelotaY, GLU_LINE);
@@ -100,9 +104,13 @@ void display(void) {
 	glMatrixMode(GL_MODELVIEW);
 
 	glPushMatrix();
-	glTranslatef(10,0,0);
-	glColor3f(1.0,0.0,0.0); 
-	gluSphere(pelotaX,1,20,20);
+	TAfin a= TAfin();
+	a=a.translated(10,0,0);
+	//glTranslatef(10,0,0);
+	glColor3f(1.0,0.0,0.0);
+	glMultMatrixf(a.matriz);
+	//gluSphere(pelotaX,1,20,20);
+	pelotaX->dibuja();
 	glPopMatrix();
 
 	glPushMatrix();
@@ -114,7 +122,7 @@ void display(void) {
 	glPushMatrix();
 	glTranslatef(0,0,10);
 	glColor3f(0.0,0.0,1.0); 
-	gluSphere(pelotaX,1,20,20);
+	gluSphere(pelotaZ,1,20,20);
 	glPopMatrix();
 
 

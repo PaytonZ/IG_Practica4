@@ -1,24 +1,24 @@
-﻿Compilación iniciada a las 15/01/2014 22:58:47.
+﻿Compilación iniciada a las 16/01/2014 17:59:00.
      1>Proyecto "C:\Users\David\Documents\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica4\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt TAfin.cpp main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica4\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-         TAfin.cpp
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\tafin.cpp(29): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\tafin.cpp(30): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\tafin.cpp(55): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\tafin.cpp(56): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\tafin.cpp(81): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\tafin.cpp(82): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
-         Generando código...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\David\Documents\GitHub\IG_Practica4\freeglut\lib\ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.lib" /MACHINE:X86 Debug\Camara.obj
+         Debug\Cara.obj
+         Debug\Cilindro.obj
+         Debug\Disco.obj
+         Debug\Esfera.obj
          Debug\main.obj
+         Debug\Malla.obj
+         Debug\Objeto3D.obj
+         Debug\ObjetoCompuesto.obj
          Debug\PV3D.obj
          Debug\TAfin.obj
+         Debug\VerticeNormal.obj
          freeglut project 3D.vcxproj -> C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.exe
      1>Compilación del proyecto terminada "C:\Users\David\Documents\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" (Build destinos).
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:02.94
+Tiempo transcurrido 00:00:02.21

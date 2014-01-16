@@ -68,14 +68,32 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camara.cpp" />
+    <ClCompile Include="Cara.cpp" />
+    <ClCompile Include="Cilindro.cpp" />
+    <ClCompile Include="Disco.cpp" />
+    <ClCompile Include="Esfera.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Malla.cpp" />
+    <ClCompile Include="Objeto3D.cpp" />
+    <ClCompile Include="ObjetoCompuesto.cpp" />
     <ClCompile Include="PV3D.cpp" />
     <ClCompile Include="TAfin.cpp" />
+    <ClCompile Include="VerticeNormal.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camara.h" />
+    <ClInclude Include="Cara.h" />
+    <ClInclude Include="Cilindro.h" />
+    <ClInclude Include="Disco.h" />
+    <ClInclude Include="Esfera.h" />
+    <ClInclude Include="Excepciones.h" />
+    <ClInclude Include="Lista.h" />
+    <ClInclude Include="Malla.h" />
+    <ClInclude Include="Objeto3D.h" />
+    <ClInclude Include="ObjetoCompuesto.h" />
     <ClInclude Include="PV3D.h" />
     <ClInclude Include="TAfin.h" />
+    <ClInclude Include="VerticeNormal.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
