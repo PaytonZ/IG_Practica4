@@ -80,8 +80,7 @@ void Camara :: inicializaOrto()
 
 void Camara :: frontal()
 {
-		/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
-
+		delete eye,look,up,n,u,v;
 		eye = new PV3D(100,100,100,false);
 
 		look = new PV3D(0,0,0,false);
@@ -106,8 +105,7 @@ void Camara :: frontal()
 
 void Camara :: cenital()
 {
-	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
-
+		delete eye,look,up,n,u,v;
 		eye = new PV3D(0,100,0,false);
 
 		look = new PV3D(0,0,0,false);
@@ -131,7 +129,7 @@ void Camara :: cenital()
 
 void Camara :: lateral()
 {
-	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+		delete eye,look,up,n,u,v;
 
 		eye = new PV3D(100,0,0,false);
 
@@ -156,14 +154,13 @@ void Camara :: lateral()
 
 void Camara :: esquina()
 {
-		/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+		delete eye,look,up,n,u,v;
 
 		eye = new PV3D(0,0,100,false);
 
 		look = new PV3D(0,0,0,false);
 
 		up = new PV3D(0,1,0,true);
-		//n = new PV3D(eyeX,eyeY,eyeZ,false);
 		
 		PV3D auxN =((*eye) - (*look)).normalizarVector();
 		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
@@ -181,7 +178,7 @@ void Camara :: esquina()
 
 void Camara :: recorridoEje(GLdouble x, GLdouble y, GLdouble z)
 {
-	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+	delete n,u,v;
 	eye->x=eye->x+x;
 
 	if (eye->x>980)
@@ -221,7 +218,7 @@ void Camara :: recorridoEje(GLdouble x, GLdouble y, GLdouble z)
 
 void Camara :: giraX(GLdouble angulo)
 {
-	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+	delete n,u,v;
 	anguloX+=angulo;
 	eye->y=eye->x*cos(anguloX / 180 * 3.14159265);
 
@@ -246,7 +243,7 @@ void Camara :: giraX(GLdouble angulo)
 
 void Camara :: giraY(GLdouble angulo)
 {
-	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+	delete n,u,v;
 	anguloY+=angulo;
 	eye->x=eye->y*cos(anguloY / 180 * 3.14159265);
 
@@ -272,7 +269,7 @@ void Camara :: giraY(GLdouble angulo)
 
 void Camara :: giraZ(GLdouble angulo)
 {
-	/**IMPORTANTE ESTO GENERA MEMORY LEAK **/
+	delete n,u,v;
 	anguloZ+=angulo;
 	eye->y=eye->z*cos(anguloZ / 180 * 3.14159265);
 

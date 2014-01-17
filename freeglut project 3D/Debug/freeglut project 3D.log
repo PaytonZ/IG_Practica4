@@ -1,18 +1,17 @@
-﻿Compilación iniciada a las 16/01/2014 22:33:47.
+﻿Compilación iniciada a las 17/01/2014 19:03:37.
      1>Proyecto "C:\Users\David\Documents\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica4\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt MunecoNieve.cpp
-         MunecoNieve.cpp
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(19): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(22): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(27): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(30): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(38): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(40): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(43): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(48): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(56): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(148): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica4\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Camara.cpp
+         Camara.cpp
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\camara.cpp(9): warning C4244: '=' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\camara.cpp(10): warning C4244: '=' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\camara.cpp(11): warning C4244: '=' : conversión de 'GLdouble' a 'float'; posible pérdida de datos
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\camara.cpp(20): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\camara.cpp(21): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\camara.cpp(38): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\camara.cpp(39): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\camara.cpp(57): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
+     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\camara.cpp(58): warning C4244: 'inicializando' : conversión de 'double' a 'float'; posible pérdida de datos
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\David\Documents\GitHub\IG_Practica4\freeglut\lib\ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.lib" /MACHINE:X86 Debug\Camara.obj
          Debug\Cara.obj
@@ -33,4 +32,4 @@
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:02.21
+Tiempo transcurrido 00:00:01.14

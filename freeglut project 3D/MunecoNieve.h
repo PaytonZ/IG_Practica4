@@ -11,7 +11,7 @@ public:
 	{
 		somb= Sombrero();
 
-		muneco= ObjetoCompuesto(8);
+		muneco= ObjetoCompuesto(11);
 
 		Objeto3D* ojoDer= new Disco(0,0.5,20,2);
 		TAfin matrizOD= TAfin();
@@ -21,6 +21,15 @@ public:
 		muneco.anadeObjetoLista(ojoDer);
 		ojoDer->setColor(1,0,0.4);
 
+		Objeto3D* ojoDerecho= new Cilindro(0.5,0.5,1.2,20,2);
+		TAfin matrizODD= TAfin();
+		matrizODD=matrizODD.rotateY(90);
+		matrizODD=matrizODD.translated(1.5,7.5,1.4);
+		ojoDerecho->setTransAfin(matrizODD);
+		muneco.anadeObjetoLista(ojoDerecho);
+		ojoDerecho->setColor(1,0,0.4);
+
+
 		Objeto3D* ojoIzq= new Disco(0,0.5,20,2);
 		TAfin matrizIZ= TAfin();
 		matrizIZ=matrizIZ.rotateY(90);
@@ -29,10 +38,18 @@ public:
 		muneco.anadeObjetoLista(ojoIzq);
 		ojoIzq->setColor(1,0,0.4);
 
-		Objeto3D* nariz= new Cilindro(0.5,0,2.5,20,2);
+		Objeto3D* ojoIzquierdo= new Cilindro(0.5,0.5,1.2,20,2);
+		TAfin matrizOII= TAfin();
+		matrizOII=matrizOII.rotateY(90);
+		matrizOII=matrizOII.translated(-1.5,7.5,1.4);
+		ojoIzquierdo->setTransAfin(matrizOII);
+		muneco.anadeObjetoLista(ojoIzquierdo);
+		ojoIzquierdo->setColor(1,0,0.4);
+
+		Objeto3D* nariz= new Cilindro(0.5,0,3.5,20,2);
 		TAfin matrizN= TAfin();
 		matrizN=matrizN.rotateY(90);
-		matrizN=matrizN.translated(0,6.5,3);
+		matrizN=matrizN.translated(0,6.5,2);
 		nariz->setTransAfin(matrizN);
 		muneco.anadeObjetoLista(nariz);
 		nariz->setColor(0.7,0.35,0);
