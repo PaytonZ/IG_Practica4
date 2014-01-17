@@ -33,6 +33,8 @@ GLdouble upX=0, upY=1, upZ=0;
 
 Camara camara;
 
+Esfera esfe = Esfera(2,20,20);
+
 //Objetos de practica
 MunecoNieve munequito;
 
@@ -48,6 +50,23 @@ void initGL() {
     glLightfv(GL_LIGHT0, GL_AMBIENT, a);
 	GLfloat p[]={25.0, 25.0, 0.0, 1.0};	 
 	glLightfv(GL_LIGHT0, GL_POSITION, p);
+	glDisable(GL_LIGHT0);
+
+	glEnable(GL_LIGHT1);
+	GLfloat p1[]={1.0, 1.0, 0.0, 0};	
+	glLightfv(GL_LIGHT1, GL_POSITION, p1);
+	glLightfv(GL_LIGHT1, GL_DIFFUSE, d);
+	glLightfv(GL_LIGHT1, GL_AMBIENT, a);
+
+	/*glEnable(GL_LIGHT2);
+	GLfloat p2[]={2.3, 7.5, 1.5, 1};
+	glLightfv(GL_LIGHT2, GL_POSITION, p2);
+	glLightf(GL_LIGHT0,GL_SPOT_CUTOFF, 45.0);
+	glLightf(GL_LIGHT0,GL_SPOT_EXPONENT,4.0);
+	GLfloat dir[]={2,0, 0.0};
+	glLightfv(GL_LIGHT0,GL_SPOT_DIRECTION, dir);
+	glLightfv(GL_LIGHT2, GL_DIFFUSE, d);
+	glLightfv(GL_LIGHT2, GL_AMBIENT, a);*/
 
 	glEnable(GL_COLOR_MATERIAL);
 	glMaterialf(GL_FRONT, GL_SHININESS, 0.1f);
@@ -58,7 +77,7 @@ void initGL() {
 	// buildSceneObjects();
 	camara = Camara(eyeX,eyeY,eyeZ,lookX,lookY,lookZ,upX,upY,upZ,N,F,xRight,xLeft,yTop,yBot);
 	
-	
+	esfe.setColor(1,1,1);
 
 	munequito = MunecoNieve();
 
@@ -100,7 +119,12 @@ void display(void) {
 
 	munequito.dibuja();
 
+	glMatrixMode(GL_MODELVIEW);
+	glPushMatrix();
 
+	glTranslated(5.5,7.5,1.5);
+	esfe.dibuja();
+	glPopMatrix();
 
 	glFlush();
 	glutSwapBuffers();
@@ -186,6 +210,14 @@ void key(unsigned char key, int x, int y){
 			camara.giraZ(5); break;
 		case 'Z':
 			camara.giraZ(-5); break;
+		case 'q':
+			glEnable(GL_LIGHT1); break;
+		case 'Q':
+			glDisable(GL_LIGHT1); break;
+		/*case 'd':
+			glEnable(GL_LIGHT2); break;
+		case 'D':
+			glDisable(GL_LIGHT2); break;*/
 		default:
 			need_redisplay = false;
 			break;

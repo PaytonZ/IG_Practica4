@@ -111,7 +111,6 @@ void Camara :: cenital()
 		look = new PV3D(0,0,0,false);
 
 		up = new PV3D(1,0,0,true);
-		//n = new PV3D(eyeX,eyeY,eyeZ,false);
 		
 		PV3D auxN =((*eye) - (*look)).normalizarVector();
 		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
@@ -136,7 +135,6 @@ void Camara :: lateral()
 		look = new PV3D(0,0,0,false);
 
 		up = new PV3D(0,1,0,true);
-		//n = new PV3D(eyeX,eyeY,eyeZ,false);
 		
 		PV3D auxN =((*eye) - (*look)).normalizarVector();
 		n = new PV3D(auxN.x,auxN.y,auxN.z,true); 
