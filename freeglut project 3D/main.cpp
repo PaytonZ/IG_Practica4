@@ -33,7 +33,7 @@ GLdouble upX=0, upY=1, upZ=0;
 
 Camara camara;
 
-Esfera esfe = Esfera(2,20,20);
+Esfera esfe = Esfera(2,2,20);
 
 //Objetos de practica
 MunecoNieve munequito;
@@ -58,16 +58,23 @@ void initGL() {
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, d);
 	glLightfv(GL_LIGHT1, GL_AMBIENT, a);
 
-	/*glEnable(GL_LIGHT2);
-	GLfloat p2[]={2.3, 7.5, 1.5, 1};
+		
+	/** LUZ 2 **/
+	
+	GLfloat p2[]={2.5, 7.5, 1.5, 1};
+	
+	glLightf(GL_LIGHT2,GL_SPOT_CUTOFF, 45.0);
+	glLightf(GL_LIGHT2,GL_SPOT_EXPONENT,4.0);
+	GLfloat dir[]={1,0, 0.0, 0.0};
+	glLightfv(GL_LIGHT2,GL_SPOT_DIRECTION, dir);
 	glLightfv(GL_LIGHT2, GL_POSITION, p2);
-	glLightf(GL_LIGHT0,GL_SPOT_CUTOFF, 45.0);
-	glLightf(GL_LIGHT0,GL_SPOT_EXPONENT,4.0);
-	GLfloat dir[]={2,0, 0.0};
-	glLightfv(GL_LIGHT0,GL_SPOT_DIRECTION, dir);
-	glLightfv(GL_LIGHT2, GL_DIFFUSE, d);
-	glLightfv(GL_LIGHT2, GL_AMBIENT, a);*/
+	
+	glEnable(GL_LIGHT2);
 
+	/*
+	glLightfv(GL_LIGHT2, GL_DIFFUSE, d);
+	glLightfv(GL_LIGHT2, GL_AMBIENT, a);
+	*/
 	glEnable(GL_COLOR_MATERIAL);
 	glMaterialf(GL_FRONT, GL_SHININESS, 0.1f);
 	glEnable(GL_DEPTH_TEST);
@@ -168,15 +175,15 @@ void key(unsigned char key, int x, int y){
 			break;
 		case 'p':
 			camara.pitch(1); break;
-		case 'P':
+		case 'o':
 			camara.pitch(-1); break;
 		case 'r':
 			camara.roll(1); break;
-		case 'R':
+		case 't':
 			camara.roll(-1); break;
 		case 'y':
 			camara.yaw(1); break;
-		case 'Y':
+		case 'u':
 			camara.yaw(-1); break;
 		case 'f':
 			camara.frontal(); break;
@@ -212,7 +219,7 @@ void key(unsigned char key, int x, int y){
 			camara.giraZ(-5); break;
 		case 'q':
 			glEnable(GL_LIGHT1); break;
-		case 'Q':
+		case 'w':
 			glDisable(GL_LIGHT1); break;
 		/*case 'd':
 			glEnable(GL_LIGHT2); break;

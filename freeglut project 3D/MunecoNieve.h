@@ -4,10 +4,12 @@
 #include "Esfera.h"
 #include "Malla.h"
 
+
+
 class MunecoNieve
 {
 public:
-	MunecoNieve(void)
+	MunecoNieve()
 	{
 		somb= Sombrero();
 

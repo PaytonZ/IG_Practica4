@@ -17,11 +17,11 @@ public:
 	{
 		arrayVN= new VerticeNormal*[numVetices];
 	}
-	Cara(){
+	~Cara(){
 		for(int i=0;i< numVetices; i++)
 		delete []arrayVN[i];
 	}
-	~Cara(void);
+	
 	void setValor(int i, int v, int n); // i= indice del array, v lo que quieres en la Vertice y n a la normal.
 	void setnumVertices(int nv);
 	int getNumeroVertices();

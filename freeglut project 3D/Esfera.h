@@ -15,7 +15,7 @@ public:
 	}
 	~Esfera(void)
 	{
-		gluDeleteQuadric(esfera);
+		//gluDeleteQuadric(esfera);
 	}
 
 	virtual void dibuja();
