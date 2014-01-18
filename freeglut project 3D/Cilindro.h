@@ -16,7 +16,7 @@ public:
 	}
 	~Cilindro(void)
 	{
-
+		gluDeleteQuadric(cilindro);
 	}
 
 	virtual void dibuja();

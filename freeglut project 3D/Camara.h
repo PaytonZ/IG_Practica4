@@ -48,7 +48,7 @@ public:
 
 	~Camara(void)
 	{
-		//delete eye,look,up,n,u,v;
+		delete eye,look,up,n,u,v;
 	}
 	 void pitch(GLfloat angulo);
 	 void yaw (GLfloat angulo);

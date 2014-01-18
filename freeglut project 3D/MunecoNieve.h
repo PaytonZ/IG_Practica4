@@ -172,6 +172,7 @@ public:
 	}
 	~MunecoNieve(void)
 	{
+
 	}
 
 	void dibuja();

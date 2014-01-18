@@ -16,7 +16,7 @@ public:
 	}
 	~Disco(void)
 	{
-
+		gluDeleteQuadric(disco);
 	}
 
 	virtual void dibuja();

@@ -1,26 +1,42 @@
-﻿Compilación iniciada a las 17/01/2014 20:07:10.
-     1>Proyecto "C:\Users\David\Documents\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" en el nodo 2 (Build destinos).
+﻿Compilación iniciada a las 18/01/2014 17:14:40.
+     1>Proyecto "E:\Mis Documentos\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" en el nodo 2 (Build destinos).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /IC:\Users\David\Documents\GitHub\IG_Practica4\freeglut\include\ /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         E:\programas\Visual Studio 2012\VC\bin\CL.exe /c /I"E:\Mis Documentos\GitHub\IG_Practica4\freeglut\include\\" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Cilindro.cpp Disco.cpp Esfera.cpp MunecoNieve.cpp Sombrero.cpp main.cpp
+         Cilindro.cpp
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\cilindro.cpp(7): warning C4244: 'argumento' : conversión de 'float' a 'GLint'; posible pérdida de datos
+         Generando código...
+         Compilando...
+         Disco.cpp
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\disco.cpp(7): warning C4244: 'argumento' : conversión de 'float' a 'GLint'; posible pérdida de datos
+         Generando código...
+         Compilando...
+         Esfera.cpp
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\esfera.cpp(7): warning C4244: 'argumento' : conversión de 'float' a 'GLint'; posible pérdida de datos
+         Generando código...
+         Compilando...
          main.cpp
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(19): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(22): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(24): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(27): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(30): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(36): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(39): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(41): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(44): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(47): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(55): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(57): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(60): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(65): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(73): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
-     1>c:\users\david\documents\github\ig_practica4\freeglut project 3d\muneconieve.h(165): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(19): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(22): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(24): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(27): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(30): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(36): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(39): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(41): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(44): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(47): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(55): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(57): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(60): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(65): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(73): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+     1>e:\mis documentos\github\ig_practica4\freeglut project 3d\muneconieve.h(165): warning C4305: 'argumento' : truncamiento de 'double' a 'float'
+         Generando código...
+         Omitiendo... (no se detectaron cambios relevantes)
+         Sombrero.cpp
+         MunecoNieve.cpp
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.exe" /INCREMENTAL /NOLOGO /LIBPATH:C:\Users\David\Documents\GitHub\IG_Practica4\freeglut\lib\ kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.lib" /MACHINE:X86 Debug\Camara.obj
+         E:\programas\Visual Studio 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\Mis Documentos\GitHub\IG_Practica4\Debug\IG_Practica4.exe" /INCREMENTAL /NOLOGO /LIBPATH:"E:\Mis Documentos\GitHub\IG_Practica4\freeglut\lib\\" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\Mis Documentos\GitHub\IG_Practica4\Debug\IG_Practica4.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\Mis Documentos\GitHub\IG_Practica4\Debug\IG_Practica4.lib" /MACHINE:X86 Debug\Camara.obj
          Debug\Cara.obj
          Debug\Cilindro.obj
          Debug\Disco.obj
@@ -34,9 +50,9 @@
          Debug\Sombrero.obj
          Debug\TAfin.obj
          Debug\VerticeNormal.obj
-         freeglut project 3D.vcxproj -> C:\Users\David\Documents\GitHub\IG_Practica4\Debug\IG_Practica4.exe
-     1>Compilación del proyecto terminada "C:\Users\David\Documents\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" (Build destinos).
+         freeglut project 3D.vcxproj -> E:\Mis Documentos\GitHub\IG_Practica4\Debug\IG_Practica4.exe
+     1>Compilación del proyecto terminada "E:\Mis Documentos\GitHub\IG_Practica4\freeglut project 3D\freeglut project 3D.vcxproj" (Build destinos).
 
 Compilación correcta.
 
-Tiempo transcurrido 00:00:02.37
+Tiempo transcurrido 00:00:03.09
