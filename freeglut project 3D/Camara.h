@@ -54,6 +54,7 @@ public:
 	 void yaw (GLfloat angulo);
 	 void roll (GLfloat angulo);
 	 void inicializaOrto();
+	 void iniciaPerspectiva();
 	 void frontal();
 	 void lateral();
 	 void cenital();

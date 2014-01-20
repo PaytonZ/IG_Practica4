@@ -73,7 +73,7 @@ void Camara :: yaw(float angle)
 
 void Camara :: inicializaOrto()
 {
-	 glMatrixMode(GL_PROJECTION);
+	glMatrixMode(GL_PROJECTION);
     glLoadIdentity();     
 	glOrtho(left, right, bottom, top, near1, far1);
 }
@@ -287,5 +287,13 @@ void Camara :: giraZ(GLdouble angulo)
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
 		gluLookAt(eye->x, eye->y, eye->z, look->x, look->y, look->z, up->x, up->y, up->z);
+
+}
+
+void Camara :: iniciaPerspectiva()
+{
+	glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+	gluPerspective(4,1,near1,far1);
 
 }

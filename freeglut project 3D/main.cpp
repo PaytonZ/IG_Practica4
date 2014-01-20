@@ -31,6 +31,10 @@ GLdouble eyeX=100.0, eyeY=100.0, eyeZ=100.0;
 GLdouble lookX=0.0, lookY=0.0, lookZ=0.0;
 GLdouble upX=0, upY=1, upZ=0;
 
+GLfloat ambientalApagada[] ={0,0,0,1};
+
+GLfloat  ambientalEncendida[] ={0.2,0.2,0.2,1};
+
 Camara camara;
 
 Esfera esfe = Esfera(2,20,20);
@@ -40,16 +44,17 @@ MunecoNieve munequito;
 
 void initGL() {	 		 
 	glClearColor(0.6f,0.7f,0.8f,1.0);
-    glEnable(GL_LIGHTING);    
+	glEnable(GL_LIGHTING);    
 
-    // Light0
-    glEnable(GL_LIGHT0);
-    GLfloat d[]={1.0,1.0,1.0,1.0};
-    glLightfv(GL_LIGHT0, GL_DIFFUSE, d);
-    GLfloat a[]={0.3f,0.3f,0.3f,1.0};
-    glLightfv(GL_LIGHT0, GL_AMBIENT, a);
+	// Light0
+	glEnable(GL_LIGHT0);
+	GLfloat d[]={1.0,1.0,1.0,1.0};
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, d);
+	GLfloat a[]={0.3f,0.3f,0.3f,1.0};
+	glLightfv(GL_LIGHT0, GL_AMBIENT, a);
 	GLfloat p[]={25.0, 25.0, 0.0, 1.0};	 
 	glLightfv(GL_LIGHT0, GL_POSITION, p);
+
 	glDisable(GL_LIGHT0);
 
 	glEnable(GL_LIGHT1);
@@ -58,15 +63,43 @@ void initGL() {
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, d);
 	glLightfv(GL_LIGHT1, GL_AMBIENT, a);
 
-	/*glEnable(GL_LIGHT2);
+
+	glEnable(GL_LIGHT_MODEL_AMBIENT);
+	glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientalApagada);
+	//glModel(GL_LIGHT_MODEL_AMBIENT, ambientalApagada);
+	//LUZ 2
+	/*
 	GLfloat p2[]={2.3, 7.5, 1.5, 1};
 	glLightfv(GL_LIGHT2, GL_POSITION, p2);
-	glLightf(GL_LIGHT0,GL_SPOT_CUTOFF, 45.0);
-	glLightf(GL_LIGHT0,GL_SPOT_EXPONENT,4.0);
+	glLightf(GL_LIGHT2,GL_SPOT_CUTOFF, 45.0);
+	glLightf(GL_LIGHT2,GL_SPOT_EXPONENT,4.0);
 	GLfloat dir[]={2,0, 0.0};
-	glLightfv(GL_LIGHT0,GL_SPOT_DIRECTION, dir);
+	glLightfv(GL_LIGHT2,GL_SPOT_DIRECTION, dir);
 	glLightfv(GL_LIGHT2, GL_DIFFUSE, d);
-	glLightfv(GL_LIGHT2, GL_AMBIENT, a);*/
+	glLightfv(GL_LIGHT2, GL_AMBIENT, a);
+	*/
+
+	GLfloat d1[] = { 1.0 , 1.0 , 1.0 , 1.0};
+	GLfloat a1[] = { 0.3,0.3,0.3,1.0};
+	GLfloat pos[4];
+	pos[0]= 2.3;
+	pos[1]=7.5;
+	pos[2]=1.5;
+	pos[3]=1.0;
+	GLfloat dir1[] = {1.0, 0.0, 1.0,0.0}; //20.0,7.5,0.0};
+	GLfloat angle=45;
+	glLightfv(GL_LIGHT2, GL_AMBIENT, a1);
+	glLightfv(GL_LIGHT2, GL_DIFFUSE, d1);
+	glLightfv(GL_LIGHT2, GL_POSITION, pos);
+	glLightfv(GL_LIGHT2,GL_SPOT_DIRECTION, dir1);
+	glLightf(GL_LIGHT2,GL_SPOT_CUTOFF, angle);
+	glLightf(GL_LIGHT2,GL_SPOT_EXPONENT,20.0);
+
+
+
+
+	glEnable(GL_LIGHT2);
+
 
 	glEnable(GL_COLOR_MATERIAL);
 	glMaterialf(GL_FRONT, GL_SHININESS, 0.1f);
@@ -76,7 +109,7 @@ void initGL() {
 
 	// buildSceneObjects();
 	camara = Camara(eyeX,eyeY,eyeZ,lookX,lookY,lookZ,upX,upY,upZ,N,F,xRight,xLeft,yTop,yBot);
-	
+
 	esfe.setColor(1,1,1);
 
 	munequito = MunecoNieve();
@@ -90,39 +123,36 @@ void initGL() {
 	camara.inicializaOrto();
 
 	// Viewport set up
-    glViewport(0, 0, WIDTH, HEIGHT);        
- }
+	glViewport(0, 0, WIDTH, HEIGHT);        
+}
 
 void display(void) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);  
 
 	// Drawing axes
 	glBegin( GL_LINES );
-		glColor3f(1.0,0.0,0.0); 
-		glVertex3f(0, 0, 0);
-		glVertex3f(20, 0, 0);	     
-	 
-		glColor3f(0.0,1.0,0.0); 
-		glVertex3f(0, 0, 0);
-		glVertex3f(0, 20, 0);	 
-	 
-		glColor3f(0.0,0.0,1.0); 
-		glVertex3f(0, 0, 0);
-		glVertex3f(0, 0, 20);	     
+	glColor3f(1.0,0.0,0.0); 
+	glVertex3f(0, 0, 0);
+	glVertex3f(20, 0, 0);	     
+
+	glColor3f(0.0,1.0,0.0); 
+	glVertex3f(0, 0, 0);
+	glVertex3f(0, 20, 0);	 
+
+	glColor3f(0.0,0.0,1.0); 
+	glVertex3f(0, 0, 0);
+	glVertex3f(0, 0, 20);	     
 	glEnd();
 
 	//Pintamos los objetos random
 
-	
-
-	
 
 	munequito.dibuja();
 
 	glMatrixMode(GL_MODELVIEW);
 	glPushMatrix();
 
-	glTranslated(5.5,7.5,1.5);
+	glTranslated(5,7.5,1.5);
 	esfe.dibuja();
 	glPopMatrix();
 
@@ -136,7 +166,7 @@ void resize(int newWidth, int newHeight) {
 	HEIGHT= newHeight;
 	GLdouble RatioViewPort= (float)WIDTH/(float)HEIGHT;
 	glViewport (0, 0, WIDTH, HEIGHT) ;
-   
+
 	GLdouble SVAWidth= xRight-xLeft;
 	GLdouble SVAHeight= yTop-yBot;
 	GLdouble SVARatio= SVAWidth/SVAHeight;
@@ -145,7 +175,7 @@ void resize(int newWidth, int newHeight) {
 		GLdouble yMiddle= ( yBot+yTop )/2.0;
 		yTop= yMiddle + newHeight/2.0;
 		yBot= yMiddle - newHeight/2.0;
-    }
+	}
 	else {      
 		GLdouble newWidth= SVAHeight*RatioViewPort;
 		GLdouble xMiddle= ( xLeft+xRight )/2.0;
@@ -161,66 +191,75 @@ void resize(int newWidth, int newHeight) {
 void key(unsigned char key, int x, int y){
 	bool need_redisplay = true;
 	switch (key) {
-		case 27:  /* Escape key */
-			//continue_in_main_loop = false; // (**)
-			//Freeglut's sentence for stopping glut's main loop (*)
-			glutLeaveMainLoop (); 
-			break;
-		case 'p':
-			camara.pitch(1); break;
-		case 'P':
-			camara.pitch(-1); break;
-		case 'r':
-			camara.roll(1); break;
-		case 'R':
-			camara.roll(-1); break;
-		case 'y':
-			camara.yaw(1); break;
-		case 'Y':
-			camara.yaw(-1); break;
-		case 'f':
-			camara.frontal(); break;
-		case 'c':
-			camara.cenital(); break;
-		case 'l':
-			camara.lateral();break;
-		case 'e':
-			camara.esquina();break;
-		case '1':
-			camara.recorridoEje(10,0,0); break;
-		case '2':
-			camara.recorridoEje(-10,0,0); break;
-		case '3':
-			camara.recorridoEje(0,10,0); break;
-		case '4':
-			camara.recorridoEje(0,-10,0); break;
-		case '5':
-			camara.recorridoEje(0,0,10); break;
-		case '6':
-			camara.recorridoEje(0,0,-10); break;
-		case 'x':
-			camara.giraX(5); break;
-		case 'X':
-			camara.giraX(-5); break;
-		case 'i':
-			camara.giraY(5); break;
-		case 'I':
-			camara.giraY(-5); break;
-		case 'z':
-			camara.giraZ(5); break;
-		case 'Z':
-			camara.giraZ(-5); break;
-		case 'q':
-			glEnable(GL_LIGHT1); break;
-		case 'Q':
-			glDisable(GL_LIGHT1); break;
-		/*case 'd':
-			glEnable(GL_LIGHT2); break;
-		case 'D':
-			glDisable(GL_LIGHT2); break;*/
-		default:
-			need_redisplay = false;
-			break;
+	case 27:  /* Escape key */
+		//continue_in_main_loop = false; // (**)
+		//Freeglut's sentence for stopping glut's main loop (*)
+		glutLeaveMainLoop (); 
+		break;
+	case 'p':
+		camara.pitch(1); break;
+	case 'P':
+		camara.pitch(-1); break;
+	case 'r':
+		camara.roll(1); break;
+	case 'R':
+		camara.roll(-1); break;
+	case 'y':
+		camara.yaw(1); break;
+	case 'Y':
+		camara.yaw(-1); break;
+	case 'f':
+		camara.frontal(); break;
+	case 'c':
+		camara.cenital(); break;
+	case 'l':
+		camara.lateral();break;
+	case 'e':
+		camara.esquina();break;
+	case '1':
+		camara.recorridoEje(10,0,0); break;
+	case '2':
+		camara.recorridoEje(-10,0,0); break;
+	case '3':
+		camara.recorridoEje(0,10,0); break;
+	case '4':
+		camara.recorridoEje(0,-10,0); break;
+	case '5':
+		camara.recorridoEje(0,0,10); break;
+	case '6':
+		camara.recorridoEje(0,0,-10); break;
+	case 'x':
+		camara.giraX(5); break;
+	case 'X':
+		camara.giraX(-5); break;
+	case 'i':
+		camara.giraY(5); break;
+	case 'I':
+		camara.giraY(-5); break;
+	case 'z':
+		camara.giraZ(5); break;
+	case 'Z':
+		camara.giraZ(-5); break;
+	case 'q':
+		glEnable(GL_LIGHT1); break;
+	case 'Q':
+		glDisable(GL_LIGHT1); break;
+	case 'h':
+		glEnable(GL_LIGHT2); break;
+	case 'j':
+		glDisable(GL_LIGHT2); break;
+	case 'n':
+		glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientalApagada);
+		break;
+	case 'm':
+		glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientalEncendida);
+		break;
+	case 'w': camara.iniciaPerspectiva();
+		break;
+	case 'W': 	camara.inicializaOrto();break;
+	default:
+		need_redisplay = false;
+		break;
 	}
 
 	if (need_redisplay)
@@ -240,7 +279,7 @@ int main(int argc, char *argv[]){
 
 	// Window construction
 	my_window = glutCreateWindow("Freeglut 3D-project");
-    
+
 	// Callback registration
 	glutReshapeFunc(resize);
 	glutKeyboardFunc(key);
@@ -255,12 +294,12 @@ int main(int argc, char *argv[]){
 	// Classic glut's main loop can be stopped after X-closing the window,
 	// using the following freeglut's setting (*)
 	glutSetOption (GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION) ;
-    
+
 	// Classic glut's main loop can be stopped in freeglut using (*)
 	glutMainLoop(); 
-  
+
 	// We would never reach this point using classic glut
 	system("PAUSE"); 
-   
+
 	return 0;
 }
