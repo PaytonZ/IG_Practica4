@@ -8,8 +8,8 @@
 void ObjetoCompuesto :: dibuja()
 {
 
-	for (int i=0; i < numHijos; i++)
-	{
+	//for (int i=0; i < numHijos; i++)
+	//{
 		Lista<Objeto3D*>::Iterador it = listaHijos.principio();
 		while (it!=listaHijos.final())
 		{
@@ -22,7 +22,7 @@ void ObjetoCompuesto :: dibuja()
 			glPopMatrix();
 			it.avanza();
 		}
-	}
+	//}
 }
 
 void ObjetoCompuesto :: anadeObjetoLista(Objeto3D* a)

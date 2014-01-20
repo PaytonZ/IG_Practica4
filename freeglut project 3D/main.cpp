@@ -38,6 +38,7 @@ GLfloat  ambientalEncendida[] ={0.2,0.2,0.2,1};
 Camara camara;
 
 Esfera esfe = Esfera(2,20,20);
+Esfera asd = Esfera(0.2,20,20);
 
 //Objetos de practica
 MunecoNieve munequito;
@@ -47,16 +48,16 @@ void initGL() {
 	glEnable(GL_LIGHTING);    
 
 	// Light0
-	glEnable(GL_LIGHT0);
-	GLfloat d[]={1.0,1.0,1.0,1.0};
+	/*glEnable(GL_LIGHT0);
 	glLightfv(GL_LIGHT0, GL_DIFFUSE, d);
-	GLfloat a[]={0.3f,0.3f,0.3f,1.0};
 	glLightfv(GL_LIGHT0, GL_AMBIENT, a);
 	GLfloat p[]={25.0, 25.0, 0.0, 1.0};	 
 	glLightfv(GL_LIGHT0, GL_POSITION, p);
 
-	glDisable(GL_LIGHT0);
+	glDisable(GL_LIGHT0);*/
 
+	GLfloat d[]={1.0,1.0,1.0,1.0};
+	GLfloat a[]={0.3f,0.3f,0.3f,1.0};
 	glEnable(GL_LIGHT1);
 	GLfloat p1[]={1.0, 1.0, 0.0, 0};	
 	glLightfv(GL_LIGHT1, GL_POSITION, p1);
@@ -147,13 +148,33 @@ void display(void) {
 	//Pintamos los objetos random
 
 
-	munequito.dibuja();
+	//munequito.dibuja();
 
 	glMatrixMode(GL_MODELVIEW);
-	glPushMatrix();
 
+	glPushMatrix();
 	glTranslated(5,7.5,1.5);
 	esfe.dibuja();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(-5,7.5,1.5);
+	esfe.dibuja();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(5,-7.5,1.5);
+	esfe.dibuja();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(-5,-7.5,1.5);
+	esfe.dibuja();
+	glPopMatrix();
+
+	glPushMatrix();
+	glTranslated(2.5,7.5,1.5);
+	//asd.dibuja();
 	glPopMatrix();
 
 	glFlush();
@@ -196,47 +217,47 @@ void key(unsigned char key, int x, int y){
 		//Freeglut's sentence for stopping glut's main loop (*)
 		glutLeaveMainLoop (); 
 		break;
-	case 'p':
+	case 'n':
 		camara.pitch(1); break;
-	case 'P':
+	case 'm':
 		camara.pitch(-1); break;
-	case 'r':
+	case 'u':
 		camara.roll(1); break;
-	case 'R':
+	case 'i':
 		camara.roll(-1); break;
-	case 'y':
+	case 'j':
 		camara.yaw(1); break;
-	case 'Y':
+	case 'k':
 		camara.yaw(-1); break;
-	case 'f':
-		camara.frontal(); break;
-	case 'c':
-		camara.cenital(); break;
-	case 'l':
-		camara.lateral();break;
-	case 'e':
-		camara.esquina();break;
-	case '1':
-		camara.recorridoEje(10,0,0); break;
-	case '2':
-		camara.recorridoEje(-10,0,0); break;
-	case '3':
-		camara.recorridoEje(0,10,0); break;
-	case '4':
-		camara.recorridoEje(0,-10,0); break;
 	case '5':
-		camara.recorridoEje(0,0,10); break;
+		camara.frontal(); break;
 	case '6':
+		camara.cenital(); break;
+	case '4':
+		camara.lateral();break;
+	case '7':
+		camara.esquina();break;
+	case 'r':
+		camara.recorridoEje(10,0,0); break;
+	case 't':
+		camara.recorridoEje(-10,0,0); break;
+	case 'f':
+		camara.recorridoEje(0,10,0); break;
+	case 'g':
+		camara.recorridoEje(0,-10,0); break;
+	case 'v':
+		camara.recorridoEje(0,0,10); break;
+	case 'b':
 		camara.recorridoEje(0,0,-10); break;
-	case 'x':
+	case '1':
 		camara.giraX(5); break;
 	case 'X':
 		camara.giraX(-5); break;
-	case 'i':
+	case '2':
 		camara.giraY(5); break;
 	case 'I':
 		camara.giraY(-5); break;
-	case 'z':
+	case '3':
 		camara.giraZ(5); break;
 	case 'Z':
 		camara.giraZ(-5); break;
@@ -244,19 +265,22 @@ void key(unsigned char key, int x, int y){
 		glEnable(GL_LIGHT1); break;
 	case 'Q':
 		glDisable(GL_LIGHT1); break;
-	case 'h':
+	case 'w':
 		glEnable(GL_LIGHT2); break;
-	case 'j':
+	case 'e':
 		glDisable(GL_LIGHT2); break;
-	case 'n':
-		glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientalApagada);
-		break;
-	case 'm':
-		glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientalEncendida);
-		break;
-	case 'w': camara.iniciaPerspectiva();
-		break;
-	case 'W': 	camara.inicializaOrto();break;
+	case '8':
+		glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientalApagada);break;
+	case '9':
+		glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientalEncendida);break;
+	case 'p': 
+		camara.iniciaPerspectiva();break;
+	case 'o': 	
+		camara.inicializaOrto();break;
+	case 'z':
+		munequito.enciendeOjos();break;
+	case 'x':
+		munequito.apagaOjos();break;
 	default:
 		need_redisplay = false;
 		break;

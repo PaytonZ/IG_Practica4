@@ -8,6 +8,7 @@ class Cilindro:
 	public Objeto3D
 {
 public:
+	Cilindro(){}
 	Cilindro(float r1,float r2, float a, float sli, float sta)
 	{
 		radio1=r1;radio2=r2; alto=a; slice=sli; stacks=sta;

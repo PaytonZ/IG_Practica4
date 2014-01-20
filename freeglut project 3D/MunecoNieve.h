@@ -3,6 +3,7 @@
 #include "Sombrero.h"
 #include "Esfera.h"
 #include "Malla.h"
+#include "Ojos.h"
 
 class MunecoNieve
 {
@@ -11,9 +12,9 @@ public:
 	{
 		somb= Sombrero();
 
-		muneco= ObjetoCompuesto(11);
+		muneco= ObjetoCompuesto(9); 
 
-		Objeto3D* ojoDer= new Disco(0,0.5,20,2);
+		/*Objeto3D* ojoDer= new Disco(0,0.5,20,2);
 		TAfin matrizOD= TAfin();
 		matrizOD=matrizOD.rotateY(90);
 		matrizOD=matrizOD.translated(1.5,7.5,2.6);
@@ -44,7 +45,15 @@ public:
 		matrizOII=matrizOII.translated(-1.5,7.5,1.4);
 		ojoIzquierdo->setTransAfin(matrizOII);
 		muneco.anadeObjetoLista(ojoIzquierdo);
-		ojoIzquierdo->setColor(1,0,0.4);
+		ojoIzquierdo->setColor(1,0,0.4);*/
+
+		Objeto3D* ojoD = new Ojos(true);
+		d=&ojoD;
+		muneco.anadeObjetoLista(ojoD);
+
+		Objeto3D* ojoI = new Ojos(false);
+		i=&ojoI;
+		muneco.anadeObjetoLista(ojoI);
 
 		Objeto3D* nariz= new Cilindro(0.5,0,3.5,20,2);
 		TAfin matrizN= TAfin();
@@ -175,10 +184,13 @@ public:
 	}
 
 	void dibuja();
+	void enciendeOjos();
+	void apagaOjos();
 
 private:
 	Sombrero somb;
 	ObjetoCompuesto muneco;
 	Malla suelo;
+	Ojos d,i;
 };
 
