@@ -1,3 +1,10 @@
+/********************************************************************************
+*																				*
+*		Practica 3 IG - Muñeco Nieve											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
 #pragma once
 #include <Windows.h>
 #include <gl/GLU.h>
@@ -15,7 +22,7 @@ public:
 	}
 	~Esfera(void)
 	{
-
+		//gluDeleteQuadric(esfera);
 	}
 
 	virtual void dibuja();

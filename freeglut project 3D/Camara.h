@@ -1,3 +1,10 @@
+/********************************************************************************
+*																				*
+*		Practica 3 IG - Muñeco Nieve											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
 #pragma once
 #include <GL/freeglut.h>
 #include "PV3D.h"

@@ -1,4 +1,10 @@
-
+/********************************************************************************
+*																				*
+*		Practica 4 IG - Muñeco Nieve											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
 
 
 #include <Windows.h>
@@ -37,8 +43,9 @@ GLfloat  ambientalEncendida[] ={0.2,0.2,0.2,1};
 
 Camara camara;
 
+
 Esfera esfe = Esfera(2,20,20);
-Esfera asd = Esfera(0.2,20,20);
+
 
 //Objetos de practica
 MunecoNieve munequito;
@@ -63,6 +70,7 @@ void initGL() {
 	glLightfv(GL_LIGHT1, GL_POSITION, p1);
 	glLightfv(GL_LIGHT1, GL_DIFFUSE, d);
 	glLightfv(GL_LIGHT1, GL_AMBIENT, a);
+
 
 
 	glEnable(GL_LIGHT_MODEL_AMBIENT);
@@ -99,9 +107,17 @@ void initGL() {
 
 
 
-	glEnable(GL_LIGHT2);
+	
 
 
+		
+	
+
+
+	/*
+	glLightfv(GL_LIGHT2, GL_DIFFUSE, d);
+	glLightfv(GL_LIGHT2, GL_AMBIENT, a);
+	*/
 	glEnable(GL_COLOR_MATERIAL);
 	glMaterialf(GL_FRONT, GL_SHININESS, 0.1f);
 	glEnable(GL_DEPTH_TEST);
@@ -148,34 +164,44 @@ void display(void) {
 	//Pintamos los objetos random
 
 
-	//munequito.dibuja();
+	munequito.dibuja();
 
 	glMatrixMode(GL_MODELVIEW);
 
 	glPushMatrix();
-	glTranslated(5,7.5,1.5);
+	glTranslated(7,7.5,0);
 	esfe.dibuja();
 	glPopMatrix();
 
-	glPushMatrix();
-	glTranslated(-5,7.5,1.5);
-	esfe.dibuja();
-	glPopMatrix();
+	
+	GLfloat d[] = {1.0,1.0,1.0,1.0};
+	GLfloat a[] = {0.3,0.3,0.3,1.0};
+	GLfloat direcion[] = {20.0, 7.8, 0.0}; //20.0, 7.8, 0.0
+	GLfloat angle = 90;
+	GLfloat p[4];
+	p[0] = 2.5;
+	p[1] = 7.5;
+	p[3] = 1.0;
+	p[2] = 1.5;
+		glLightfv(GL_LIGHT2, GL_AMBIENT, a);
+		glLightfv(GL_LIGHT2, GL_DIFFUSE, d);
+		glLightfv(GL_LIGHT2, GL_POSITION, p);
+		glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION,direcion);
+		glLightf(GL_LIGHT2, GL_SPOT_CUTOFF,angle);
+		glLightf(GL_LIGHT2, GL_SPOT_EXPONENT, 20.0);
 
-	glPushMatrix();
-	glTranslated(5,-7.5,1.5);
-	esfe.dibuja();
-	glPopMatrix();
+	GLfloat p1[4];
+	p1[0] = 2.5;
+	p1[1] = 7.5;
+	p1[3] = 1.0;
+	p1[2] = -1.5;
+		glLightfv(GL_LIGHT3, GL_AMBIENT, a);
+		glLightfv(GL_LIGHT3, GL_DIFFUSE, d);
+		glLightfv(GL_LIGHT3, GL_POSITION, p1);
+		glLightfv(GL_LIGHT3, GL_SPOT_DIRECTION,direcion);
+		glLightf(GL_LIGHT3, GL_SPOT_CUTOFF,angle);
+		glLightf(GL_LIGHT3, GL_SPOT_EXPONENT, 20.0);
 
-	glPushMatrix();
-	glTranslated(-5,-7.5,1.5);
-	esfe.dibuja();
-	glPopMatrix();
-
-	glPushMatrix();
-	glTranslated(2.5,7.5,1.5);
-	//asd.dibuja();
-	glPopMatrix();
 
 	glFlush();
 	glutSwapBuffers();
@@ -266,9 +292,9 @@ void key(unsigned char key, int x, int y){
 	case 'Q':
 		glDisable(GL_LIGHT1); break;
 	case 'w':
-		glEnable(GL_LIGHT2); break;
+		glEnable(GL_LIGHT2); glEnable(GL_LIGHT3); break;
 	case 'e':
-		glDisable(GL_LIGHT2); break;
+		glDisable(GL_LIGHT2); glDisable(GL_LIGHT3); break;
 	case '8':
 		glLightModelfv(GL_LIGHT_MODEL_AMBIENT, ambientalApagada);break;
 	case '9':
@@ -277,13 +303,10 @@ void key(unsigned char key, int x, int y){
 		camara.iniciaPerspectiva();break;
 	case 'o': 	
 		camara.inicializaOrto();break;
-	case 'z':
-		munequito.enciendeOjos();break;
-	case 'x':
-		munequito.apagaOjos();break;
 	default:
 		need_redisplay = false;
 		break;
+
 	}
 
 	if (need_redisplay)
@@ -302,7 +325,7 @@ int main(int argc, char *argv[]){
 	glutInit(&argc, argv);
 
 	// Window construction
-	my_window = glutCreateWindow("Freeglut 3D-project");
+	my_window = glutCreateWindow("Muñeco maligno que lanza rayos de luz por los ojos");
 
 	// Callback registration
 	glutReshapeFunc(resize);

@@ -1,3 +1,11 @@
+/********************************************************************************
+*																				*
+*		Practica 4 IG - Muñeco Nieve											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
+
 #include "ObjetoCompuesto.h"
 #include <Windows.h>
 #include <gl/GL.h>

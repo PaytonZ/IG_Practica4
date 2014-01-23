@@ -1,6 +1,6 @@
 /********************************************************************************
 *																				*
-*		Practica 3 IG - Planeta y satelite										*
+*		Practica 3 IG - Muñeco Nieve											*
 *		Autores:	David Garcia Alvarez										*
 *					Juan Luis Perez Valbuena									*
 *																				*

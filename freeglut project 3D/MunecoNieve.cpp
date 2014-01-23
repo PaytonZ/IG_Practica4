@@ -1,3 +1,11 @@
+/********************************************************************************
+*																				*
+*		Practica 4 IG - Muñeco Nieve											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
+
 #include "MunecoNieve.h"
 
 
@@ -11,14 +19,3 @@ void MunecoNieve :: dibuja()
 	suelo.dibuja();
 }
 
-void MunecoNieve :: enciendeOjos()
-{
-	d.enciendeOjos();
-	i.enciendeOjos();
-}
-
-void MunecoNieve :: apagaOjos()
-{
-	d.apagaOjos();
-	i.apagaOjos();
-}

@@ -1,6 +1,6 @@
 /********************************************************************************
 *																				*
-*		Practica 3 IG - Planeta y satelite										*
+*		Practica 4 IG - Muñeco Nieve											*
 *		Autores:	David Garcia Alvarez										*
 *					Juan Luis Perez Valbuena									*
 *																				*
@@ -14,9 +14,6 @@
 
 
 
-Cara::~Cara(void)
-{
-}
 
 void Cara:: setnumVertices(int nv)
 {

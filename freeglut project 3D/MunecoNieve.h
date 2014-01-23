@@ -1,3 +1,11 @@
+/********************************************************************************
+*																				*
+*		Practica 3 IG - Muñeco Nieve											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
+
 #pragma once
 #include "ObjetoCompuesto.h"
 #include "Sombrero.h"
@@ -5,16 +13,18 @@
 #include "Malla.h"
 #include "Ojos.h"
 
+
+
 class MunecoNieve
 {
 public:
-	MunecoNieve(void)
+	MunecoNieve()
 	{
 		somb= Sombrero();
 
 		muneco= ObjetoCompuesto(9); 
 
-		/*Objeto3D* ojoDer= new Disco(0,0.5,20,2);
+		Objeto3D* ojoDer= new Disco(0,0.5,20,2);
 		TAfin matrizOD= TAfin();
 		matrizOD=matrizOD.rotateY(90);
 		matrizOD=matrizOD.translated(1.5,7.5,2.6);
@@ -22,13 +32,13 @@ public:
 		muneco.anadeObjetoLista(ojoDer);
 		ojoDer->setColor(1,0,0.4);
 
-		Objeto3D* ojoDerecho= new Cilindro(0.5,0.5,1.2,20,2);
+		/*Objeto3D* ojoDerecho= new Cilindro(0.5,0.5,1.2,20,2);
 		TAfin matrizODD= TAfin();
 		matrizODD=matrizODD.rotateY(90);
 		matrizODD=matrizODD.translated(1.5,7.5,1.4);
 		ojoDerecho->setTransAfin(matrizODD);
 		muneco.anadeObjetoLista(ojoDerecho);
-		ojoDerecho->setColor(1,0,0.4);
+		ojoDerecho->setColor(1,0,0.4);*/
 
 
 		Objeto3D* ojoIzq= new Disco(0,0.5,20,2);
@@ -39,7 +49,7 @@ public:
 		muneco.anadeObjetoLista(ojoIzq);
 		ojoIzq->setColor(1,0,0.4);
 
-		Objeto3D* ojoIzquierdo= new Cilindro(0.5,0.5,1.2,20,2);
+		/*Objeto3D* ojoIzquierdo= new Cilindro(0.5,0.5,1.2,20,2);
 		TAfin matrizOII= TAfin();
 		matrizOII=matrizOII.rotateY(90);
 		matrizOII=matrizOII.translated(-1.5,7.5,1.4);
@@ -47,12 +57,12 @@ public:
 		muneco.anadeObjetoLista(ojoIzquierdo);
 		ojoIzquierdo->setColor(1,0,0.4);*/
 
-		Objeto3D* ojoD = new Ojos(true);
-		d=&ojoD;
+		d= new Ojos(true);
+		Objeto3D* ojoD =d;
 		muneco.anadeObjetoLista(ojoD);
 
-		Objeto3D* ojoI = new Ojos(false);
-		i=&ojoI;
+		i=new Ojos(false);
+		Objeto3D* ojoI = i;
 		muneco.anadeObjetoLista(ojoI);
 
 		Objeto3D* nariz= new Cilindro(0.5,0,3.5,20,2);
@@ -181,16 +191,16 @@ public:
 	}
 	~MunecoNieve(void)
 	{
+
 	}
 
 	void dibuja();
-	void enciendeOjos();
-	void apagaOjos();
 
 private:
 	Sombrero somb;
 	ObjetoCompuesto muneco;
 	Malla suelo;
-	Ojos d,i;
+	Ojos* d;
+	Ojos* i;
 };
 

@@ -32,8 +32,6 @@ public:
 	~Ojos(void){}
 
 	virtual void dibuja();
-	void enciendeOjos();
-	void apagaOjos();
 
 private:
 	Cilindro *ciOjo;

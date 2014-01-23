@@ -1,3 +1,11 @@
+/********************************************************************************
+*																				*
+*		Practica 4 IG - Muñeco Nieve											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
+
 #include "Camara.h"
 #include <math.h>
 
@@ -11,7 +19,7 @@ void Camara :: setModelViewMatrix()
 	m[2] =  n->x; m[6] =  n->y; m[10] =  n->z;  m[14] = -eye->productoEscalar(*n);
     m[3] =  0;   m[7] =  0;   m[11] =  0;    m[15] = 1.0;
     glMatrixMode(GL_MODELVIEW);
-    glLoadMatrixf(m);  // load OpenGL's modelview matrix
+    glLoadMatrixf(m); 
 }
 
 

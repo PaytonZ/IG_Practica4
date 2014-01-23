@@ -1,3 +1,11 @@
+/********************************************************************************
+*																				*
+*		Practica 3 IG - Muñeco Nieve											*
+*		Autores:	David Garcia Alvarez										*
+*					Juan Luis Perez Valbuena									*
+*																				*
+*********************************************************************************/
+
 #include "TAfin.h"
 #include <math.h>
 #include <algorithm>
